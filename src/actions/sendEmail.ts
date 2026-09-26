@@ -1,36 +1,55 @@
 "use server";
 
-import { Resend } from "resend";
-import { ContactEmailTemplate } from "../components/email/ContactEmailTemplate";
+import { render } from "@react-email/render";
+import nodemailer from "nodemailer";
 import * as React from "react";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { ContactEmailTemplate } from "../components/email/ContactEmailTemplate";
 
 export async function sendEmail(formData: FormData) {
-  const name = formData.get("name") as string;
-  const email = formData.get("email") as string;
-  const message = formData.get("message") as string;
+  const name = String(formData.get("name") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
+  const message = String(formData.get("message") ?? "").trim();
 
   if (!name || !email || !message) {
     return { error: "All fields are required." };
   }
 
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return { error: "Please enter a valid email address." };
+  }
+
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPassword = process.env.SMTP_PASSWORD;
+  const contactEmail = process.env.CONTACT_EMAIL;
+  const smtpPort = Number(process.env.SMTP_PORT ?? 587);
+
+  if (!smtpHost || !smtpUser || !smtpPassword || !contactEmail || !Number.isInteger(smtpPort)) {
+    return { error: "Email service is not configured yet. Please try again later." };
+  }
+
   try {
-    const data = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "delivered@resend.dev",
-      replyTo: email,
-      subject: `New Contact Request from ${name}`,
-      react: ContactEmailTemplate({ name, email, message }) as React.ReactElement,
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465,
+      auth: {
+        user: smtpUser,
+        pass: smtpPassword,
+      },
     });
 
-    if (data.error) {
-      return { error: data.error.message };
-    }
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM ?? smtpUser,
+      to: contactEmail,
+      replyTo: email,
+      subject: `New Contact Request from ${name}`,
+      html: await render(React.createElement(ContactEmailTemplate, { name, email, message })),
+    });
 
     return { success: true };
   } catch (error) {
-    console.log(error);
+    console.error("Failed to send contact email", error);
     return { error: "Failed to send email. Please try again later." };
   }
 }
