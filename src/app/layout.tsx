@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const siteUrl = "https://www.ismailh.dev";
 const name = "Ismail Hossain";
-const defaultTitle = `${name} | MIST CSE Developer & Designer`;
+const defaultTitle = `${name} | Developer & Designer`;
 const description =
-  "Ismail Hossain is a full-stack developer and designer from MIST CSE, building web apps, React Native mobile apps, AI and computer vision projects. Explore his work and get in touch.";
+  "Ismail Hossain is a full-stack developer and designer, building web apps, React Native mobile apps, AI and computer vision projects. Explore his work and get in touch.";
 
 export const viewport: Viewport = {
   width: "device-width",
