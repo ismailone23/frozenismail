@@ -1,59 +1,57 @@
-"use client";
-
-import { motion } from "framer-motion";
+const experience = [
+  {
+    period: "Jul 2025 — Present",
+    role: "Independent product engineering",
+    organization: "",
+    description:
+      "Built the complete ROS 2/YOLO tree-detection pipeline for MIST Mongol Barota and the faculty-evaluation Chrome extension. Also worked with startups and participated in multiple hackathons.",
+  },
+  {
+    period: "Jan — Jul 2025",
+    role: "Full-stack developer",
+    organization: "Byteform LLC",
+    description:
+      "Designed PostMind's mobile writing UI and integrated OpenAI for generation. Built Sonkhipto's Next.js/Cheerio scraper and scheduled cron job for news ingestion.",
+  },
+];
 
 export default function Experience() {
   return (
-    <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32" id="experience">
-      <motion.h2 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="font-headline-md text-headline-md text-text-primary mb-16 text-center"
-      >
-        Career Trajectory
-      </motion.h2>
-      <div className="max-w-3xl mx-auto relative">
-        <div className="absolute left-4 md:left-[50%] top-0 bottom-0 w-px bg-surface-stroke -translate-x-1/2"></div>
-        
-        {/* Timeline Item 1 */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="relative flex flex-col md:flex-row justify-between items-start md:items-center mb-16 pl-12 md:pl-0"
+    <section
+      className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-28"
+      id="experience"
+      aria-labelledby="experience-heading"
+    >
+      <div className="mx-auto max-w-4xl">
+        <h2
+          id="experience-heading"
+          className="font-headline-md text-headline-md text-text-primary mb-10"
         >
-          <div className="absolute left-4 md:left-[50%] top-0 w-3 h-3 rounded-full bg-primary-container border-2 border-background -translate-x-1/2 mt-1.5 md:mt-0 shadow-[0_0_10px_rgba(230,76,255,0.5)]"></div>
-          <div className="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0">
-            <h3 className="font-headline-md text-xl text-text-primary">Exploring Technologies</h3>
-            <p className="font-body-md text-primary mt-1">Self-Development</p>
-          </div>
-          <div className="md:w-[45%] md:pl-12">
-            <span className="inline-block px-2 py-1 rounded bg-surface-variant text-text-muted font-label-caps text-[10px] mb-2">JUL 2025 - PRESENT</span>
-            <p className="font-body-md text-on-surface-variant text-sm">Actively researching and experimenting with emerging technologies, advanced AI integrations, and refining modern web and mobile development architectures.</p>
-          </div>
-        </motion.div>
-
-        {/* Timeline Item 2 */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative flex flex-col md:flex-row justify-between items-start md:items-center mb-16 pl-12 md:pl-0"
-        >
-          <div className="absolute left-4 md:left-[50%] top-0 w-3 h-3 rounded-full bg-surface-variant border-2 border-background -translate-x-1/2 mt-1.5 md:mt-0"></div>
-          <div className="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0">
-            <h3 className="font-headline-md text-xl text-text-primary">Full-Stack Developer</h3>
-            <p className="font-body-md text-text-muted mt-1">Byteform LLC</p>
-          </div>
-          <div className="md:w-[45%] md:pl-12">
-            <span className="inline-block px-2 py-1 rounded bg-surface-variant text-text-muted font-label-caps text-[10px] mb-2">JAN 2025 - JUL 2025</span>
-            <p className="font-body-md text-on-surface-variant text-sm">Architected cross-platform mobile apps like Tweet AI and Sonkhipto News with Stripe & RevenueCat subscriptions. Implemented AI-driven web scraping features using Next.js and Cheerio.</p>
-          </div>
-        </motion.div>
+          Career Trajectory
+        </h2>
+        <ol className="border-t border-surface-stroke">
+          {experience.map((entry) => (
+            <li
+              key={entry.role}
+              className="grid gap-3 border-b border-surface-stroke py-8 md:grid-cols-[190px_minmax(0,1fr)] md:gap-10 md:py-9"
+            >
+              <span className="font-label-caps text-xs uppercase tracking-[0.06em] text-on-surface-variant md:pt-2">
+                {entry.period}
+              </span>
+              <div>
+                <h3 className="font-headline-md text-[clamp(1.5rem,2vw,1.875rem)] font-bold leading-tight tracking-[-0.02em] text-text-primary">
+                  {entry.role}
+                </h3>
+                <p className="font-body-md text-on-surface-variant mt-1 mb-4">
+                  {entry.organization}
+                </p>
+                <p className="font-body-md text-body-md text-on-surface-variant max-w-[65ch]">
+                  {entry.description}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
