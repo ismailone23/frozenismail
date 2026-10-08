@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">SiteAssist platform preview</title>
+  <desc id="desc">Illustrative preview of the SiteAssist dashboard and a website assistant answering a visitor question.</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#292929"/>
+    </pattern>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <clipPath id="browser"><rect x="84" y="86" width="893" height="495" rx="12"/></clipPath>
+  </defs>
+  <rect width="1200" height="675" fill="#101010"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="1004" cy="90" r="210" fill="#fff" opacity=".025"/>
+
+  <g filter="url(#shadow)" clip-path="url(#browser)" font-family="Arial, sans-serif">
+    <rect x="84" y="86" width="893" height="495" fill="#fff"/>
+    <rect x="84" y="86" width="893" height="47" fill="#f0f1f2"/>
+    <circle cx="113" cy="109" r="5" fill="#cbd0d3"/>
+    <circle cx="131" cy="109" r="5" fill="#cbd0d3"/>
+    <circle cx="149" cy="109" r="5" fill="#cbd0d3"/>
+    <rect x="181" y="98" width="570" height="23" rx="5" fill="#fff"/>
+    <text x="196" y="114" font-size="12" fill="#70757a">app.siteassist.io / overview</text>
+    <rect x="84" y="133" width="225" height="448" fill="#fafafa"/>
+    <path d="M309 133v448" stroke="#e9e9e9"/>
+    <path d="m119 176 22-13c5-3 8-1 8 4v8c0 2-1 4-3 5l-20 12c-5 3-8 1-8-3v-8c0-2 0-4 1-5Zm0 28 22-13c5-3 8-1 8 4v8c0 2-1 4-3 5l-20 12c-5 3-8 1-8-3v-8c0-2 0-4 1-5Z" fill="#ff5200"/>
+    <text x="165" y="197" font-size="21" font-weight="700" fill="#171717">SiteAssist</text>
+    <rect x="103" y="251" width="186" height="35" rx="6" fill="#efefef"/>
+    <text x="123" y="274" font-size="15" font-weight="700" fill="#202020">Overview</text>
+    <text x="123" y="322" font-size="15" fill="#545454">Conversations</text>
+    <text x="123" y="366" font-size="15" fill="#545454">Assistants</text>
+    <text x="123" y="410" font-size="15" fill="#545454">Knowledge Base</text>
+    <text x="344" y="191" font-size="27" font-weight="700" fill="#1f1f1f">Overview</text>
+    <path d="M309 215h668" stroke="#e7e7e7"/>
+    <rect x="345" y="245" width="236" height="91" rx="9" fill="#fff" stroke="#e1e1e1"/>
+    <text x="367" y="275" font-size="14" fill="#606060">Conversations</text>
+    <path d="M367 302h107" stroke="#d8d8d8" stroke-width="10" stroke-linecap="round"/>
+    <rect x="594" y="245" width="236" height="91" rx="9" fill="#fff" stroke="#e1e1e1"/>
+    <text x="616" y="275" font-size="14" fill="#606060">Visitors</text>
+    <path d="M616 302h96" stroke="#d8d8d8" stroke-width="10" stroke-linecap="round"/>
+    <rect x="345" y="358" width="485" height="192" rx="9" fill="#fff" stroke="#e1e1e1"/>
+    <text x="369" y="391" font-size="16" font-weight="700" fill="#202020">Messages usage</text>
+    <path d="M369 508h439" stroke="#e9e9e9"/>
+    <path d="M369 472h439M369 436h439" stroke="#f1f1f1"/>
+    <rect x="406" y="475" width="37" height="33" rx="5" fill="#ff5200"/>
+    <rect x="481" y="432" width="37" height="76" rx="5" fill="#ff5200"/>
+    <rect x="556" y="452" width="37" height="56" rx="5" fill="#ff5200"/>
+    <rect x="631" y="417" width="37" height="91" rx="5" fill="#ff5200"/>
+  </g>
+  <rect x="84" y="86" width="893" height="495" rx="12" fill="none" stroke="#444"/>
+
+  <g filter="url(#shadow)">
+    <rect x="721" y="67" width="399" height="542" rx="14" fill="#fff"/>
+    <rect x="721" y="67" width="399" height="542" rx="14" fill="none" stroke="#dedede"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="741" y="89" width="43" height="43" rx="12" fill="#ff5200"/>
+    <path d="M752 102 769 92c3-2 5 0 5 3v5c0 2-1 3-3 4l-17 10c-3 2-5 0-5-3v-5c0-2 1-3 3-4Zm0 16 17-10c3-2 5 0 5 3v5c0 2-1 3-3 4l-17 10c-3 2-5 0-5-3v-5c0-2 1-3 3-4Z" fill="#fff"/>
+    <text x="800" y="108" font-size="20" font-weight="700" fill="#202020">SiteAssist</text>
+    <text x="800" y="129" font-size="13" fill="#646464">Website assistant</text>
+    <path d="M721 151h399" stroke="#e8e8e8"/>
+    <rect x="812" y="184" width="285" height="70" rx="12" fill="#f2f2f2"/>
+    <text x="829" y="211" font-size="14" fill="#252525">How can I get started?</text>
+    <text x="829" y="233" font-size="14" fill="#252525">I'd like to know more.</text>
+    <rect x="744" y="282" width="337" height="130" rx="12" fill="#fff" stroke="#e5e5e5"/>
+    <text x="764" y="310" font-size="14" fill="#252525">Start with your website URL.</text>
+    <text x="764" y="333" font-size="14" fill="#252525">The assistant can learn from your</text>
+    <text x="764" y="356" font-size="14" fill="#252525">pages and answer visitor questions.</text>
+    <path d="M764 372h291" stroke="#e8e8e8"/>
+    <text x="764" y="395" font-size="13" fill="#e34d00">↗ Source: Your website</text>
+    <path d="M721 475h399" stroke="#ededed"/>
+    <rect x="742" y="497" width="356" height="49" rx="8" fill="#fafafa" stroke="#dedede"/>
+    <text x="757" y="527" font-size="14" fill="#737373">Ask a question...</text>
+    <circle cx="1075" cy="521" r="14" fill="#ff5200"/>
+    <path d="m1069 521h12m-5-5 5 5-5 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <text x="921" y="586" text-anchor="middle" font-size="12" fill="#848484">Powered by SiteAssist</text>
+  </g>
+</svg>

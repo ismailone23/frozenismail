@@ -37,11 +37,11 @@ export default function Navbar() {
           <a className="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 nav-link cursor-pointer" onClick={(e) => handleNavClick(e, 'experience')}>Experience</a>
           <a className="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 nav-link cursor-pointer" onClick={(e) => handleNavClick(e, 'about')}>About</a>
         </div>
-        <a className="hidden md:inline-flex items-center justify-center px-6 py-2 rounded-full bg-primary-container text-surface-container-low font-body-md font-bold hover:scale-95 transition-transform duration-200 cursor-pointer" onClick={(e) => handleNavClick(e, 'contact')}>
+        <a className="cta-button cta-button-primary cta-button-compact hidden md:inline-flex" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
           Hire Me
         </a>
-        <button className="md:hidden text-text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <span className="material-symbols-outlined text-3xl">menu</span>
+        <button className="cta-icon-button md:hidden" type="button" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span className="material-symbols-outlined text-2xl" aria-hidden="true">{isMenuOpen ? 'close' : 'menu'}</span>
         </button>
       </div>
       {/* Mobile Menu */}
@@ -51,7 +51,9 @@ export default function Navbar() {
           <a className="font-body-md text-on-surface-variant p-2 cursor-pointer" onClick={(e) => handleNavClick(e, 'skills')}>Skills</a>
           <a className="font-body-md text-on-surface-variant p-2 cursor-pointer" onClick={(e) => handleNavClick(e, 'experience')}>Experience</a>
           <a className="font-body-md text-on-surface-variant p-2 cursor-pointer" onClick={(e) => handleNavClick(e, 'about')}>About</a>
-          <a className="inline-flex items-center justify-center px-6 py-2 mt-2 rounded-full bg-primary-container text-surface-container-low font-body-md font-bold cursor-pointer" onClick={(e) => handleNavClick(e, 'contact')}>Hire Me</a>
+          <a className="cta-button cta-button-primary cta-button-compact mt-2 w-full" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
+            Hire Me
+          </a>
         </div>
       </div>
     </nav>

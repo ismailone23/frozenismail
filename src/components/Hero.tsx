@@ -25,10 +25,10 @@ export default function Hero() {
           Building digital experiences with precision and soul. I craft scalable systems and pixel-perfect interfaces that solve real problems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-container text-surface-container-low font-body-md font-bold hover:opacity-90 transition-opacity cursor-pointer" onClick={(e) => scrollToSection(e, 'projects')}>
+          <a className="cta-button cta-button-primary" href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>
             View Projects
           </a>
-          <a className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-surface-stroke text-text-primary font-body-md hover:bg-surface-stroke transition-colors cursor-pointer" onClick={(e) => scrollToSection(e, 'contact')}>
+          <a className="cta-button cta-button-secondary" href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>
             Contact Me
           </a>
         </div>

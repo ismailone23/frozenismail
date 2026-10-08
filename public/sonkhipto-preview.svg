@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sonkhipto News app preview</title>
+  <desc id="desc">Illustrative preview of Sonkhipto's short-news feed and reading interface.</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#292929"/>
+    </pattern>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <clipPath id="phone"><rect x="751" y="81" width="288" height="516" rx="29"/></clipPath>
+  </defs>
+  <rect width="1200" height="675" fill="#101010"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="1004" cy="90" r="210" fill="#fff" opacity=".025"/>
+
+  <g filter="url(#shadow)">
+    <rect x="105" y="122" width="665" height="422" rx="14" fill="#fff"/>
+    <rect x="105" y="122" width="665" height="422" rx="14" fill="none" stroke="#e0e0e0"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="105" y="122" width="665" height="73" rx="14" fill="#ff3a47"/>
+    <rect x="105" y="177" width="665" height="18" fill="#ff3a47"/>
+    <path d="M146 152 171 137c4-2 8 0 8 4v7c0 2-1 4-4 6l-25 15c-5 3-8 0-8-4v-7c0-2 1-4 4-6Zm0 28 25-15c4-2 8 0 8 4v7c0 2-1 4-4 6l-25 15c-5 3-8 0-8-4v-7c0-2 1-4 4-6Z" fill="#fff" transform="translate(0,-5)"/>
+    <text x="197" y="168" font-size="26" font-weight="700" fill="#fff">Sonkhipto</text>
+    <text x="142" y="248" font-size="14" font-weight="700" letter-spacing="2" fill="#ff3a47">YOUR DAILY BRIEFING</text>
+    <text x="142" y="294" font-size="30" font-weight="700" fill="#202125">The news, in a nutshell.</text>
+    <text x="142" y="326" font-size="17" fill="#62656b">Top stories from Bangladesh and beyond.</text>
+    <path d="M142 361h495" stroke="#e8e9ec"/>
+    <rect x="142" y="388" width="95" height="27" rx="13.5" fill="#ffe9ec"/>
+    <text x="190" y="406" font-size="13" fill="#d62f3c" text-anchor="middle">My Feed</text>
+    <rect x="249" y="388" width="100" height="27" rx="13.5" fill="#f4f4f5"/>
+    <text x="299" y="406" font-size="13" fill="#595b62" text-anchor="middle">Trending</text>
+    <path d="M142 450h389M142 469h457M142 488h325" stroke="#e1e3e7" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="733" y="41" width="324" height="594" rx="43" fill="#171719" stroke="#58585b" stroke-width="2"/>
+    <rect x="751" y="81" width="288" height="516" rx="29" fill="#fff"/>
+  </g>
+  <g clip-path="url(#phone)" font-family="Arial, sans-serif">
+    <rect x="751" y="81" width="288" height="516" fill="#fff"/>
+    <rect x="751" y="81" width="288" height="93" fill="#ff3a47"/>
+    <text x="775" y="117" font-size="21" font-weight="700" fill="#fff">Sonkhipto</text>
+    <text x="775" y="151" font-size="14" fill="#fff">My Feed</text>
+    <text x="900" y="151" font-size="14" fill="#fff" opacity=".75">Trending</text>
+    <rect x="766" y="191" width="258" height="181" rx="11" fill="#f5f0ef"/>
+    <rect x="766" y="191" width="258" height="181" rx="11" fill="#ed6671" opacity=".17"/>
+    <path d="M789 302c37-68 52-15 79-57s58-4 82-24 39-6 54-13" fill="none" stroke="#dc3e4c" stroke-width="16" stroke-linecap="round" opacity=".36"/>
+    <path d="M783 330h120" stroke="#fff" stroke-width="11" stroke-linecap="round" opacity=".8"/>
+    <text x="775" y="408" font-size="12" font-weight="700" fill="#e3424e">TOP STORIES</text>
+    <text x="775" y="440" font-size="22" font-weight="700" fill="#202125">A clearer way</text>
+    <text x="775" y="466" font-size="22" font-weight="700" fill="#202125">to catch up.</text>
+    <path d="M775 492h230M775 510h213M775 528h166" stroke="#dedfe2" stroke-width="8" stroke-linecap="round"/>
+    <path d="M766 560h258" stroke="#ececef"/>
+    <text x="795" y="584" text-anchor="middle" font-size="12" fill="#292b30">Feed</text>
+    <text x="891" y="584" text-anchor="middle" font-size="12" fill="#777a80">Discover</text>
+    <text x="988" y="584" text-anchor="middle" font-size="12" fill="#777a80">Saved</text>
+  </g>
+  <rect x="837" y="62" width="116" height="24" rx="12" fill="#171719"/>
+  <path d="M865 615h60" stroke="#c7c7c9" stroke-width="4" stroke-linecap="round"/>
+</svg>
