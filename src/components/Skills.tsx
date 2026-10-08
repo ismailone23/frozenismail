@@ -54,7 +54,7 @@ const marqueeSkills = [
 export default function Skills() {
   return (
     <section
-      className="overflow-hidden border-y border-surface-stroke bg-[#0b0b0d] py-24 md:py-28"
+      className="overflow-hidden py-24"
       id="skills"
       aria-labelledby="skills-heading"
     >

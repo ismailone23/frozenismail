@@ -23,24 +23,40 @@ export default function Hero() {
           </span>
         </div>
         <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary mb-6">
-          Full-stack Developer <br className="hidden md:block" />
-          <span className="text-text-muted">&amp; Designer</span>
+          Ismail <span className="text-text-muted">Hossain</span>
         </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
-          I&apos;m Ismail Hossain, a full-stack developer and designer from MIST
-          CSE. I build scalable systems and thoughtful interfaces that solve
-          real problems.
+        <p className="font-body-lg text-body-lg text-on-surface-variant mb-2 max-w-xl">
+          A full-stack developer and designer. I build scalable systems and
+          thoughtful interfaces that solve real problems.
+        </p>
+        <p className="font-body-md text-body-md text-on-surface-variant mb-10">
+          <svg
+            aria-hidden="true"
+            className="inline-block w-4 h-4 mr-2 text-on-surface-variant"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 21s7-5.25 7-11a7 7 0 1 0-14 0c0 5.75 7 11 7 11Z"
+            />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+          Dhaka, Bangladesh
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-container text-surface-container-low font-body-md font-bold hover:opacity-90 transition-opacity cursor-pointer"
+            className="inline-flex items-center justify-center px-8 py-2 rounded-xl bg-primary-container text-surface-container-low font-body-md font-bold hover:opacity-90 transition-opacity cursor-pointer"
             href="#projects"
             onClick={(e) => scrollToSection(e, "projects")}
           >
-            View Projects
+            Projects
           </a>
           <a
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-surface-stroke text-text-primary font-body-md hover:bg-surface-stroke transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center px-8 py-2 rounded-xl border border-surface-stroke text-text-primary font-body-md hover:bg-surface-stroke transition-colors cursor-pointer"
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
           >
