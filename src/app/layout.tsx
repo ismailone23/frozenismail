@@ -29,7 +29,7 @@ const description =
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0b0b0f", // match your dark background
+  themeColor: "#0b0b0f",
   colorScheme: "dark",
 };
 
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description,
     images: ["/og-image.png"],
-    // creator: "@yourhandle",
+    // creator: "@handle",
   },
   icons: {
     icon: [
