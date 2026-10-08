@@ -4,9 +4,7 @@ export default function Footer() {
       <div className="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter">
         <div className="flex items-center gap-2.5 group cursor-default">
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container border border-surface-stroke text-primary transition-all duration-300 group-hover:bg-primary-container group-hover:text-surface-container-low">
-            <span className="material-symbols-outlined text-[16px]">
-              terminal
-            </span>
+            <span className="brand-mark size-4" aria-hidden="true" />
           </div>
           <span className="font-display-md text-xl font-extrabold tracking-tight text-text-primary">
             ismail

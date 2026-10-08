@@ -52,8 +52,6 @@
   --color-on-secondary-fixed-variant: #ffffff;
   --color-tertiary-fixed-dim: #e5e5e5;
   --color-on-surface: #ffffff;
-  --color-cta-accent: #ff6a51;
-  --color-cta-accent-hover: #ff8975;
 
   --radius-DEFAULT: 0.125rem;
   --radius-lg: 0.25rem;
@@ -66,12 +64,12 @@
   --spacing-margin-desktop: 64px;
   --spacing-gutter: 24px;
 
-  --font-display-lg-mobile: "Hanken Grotesk", sans-serif;
-  --font-display-lg: "Hanken Grotesk", sans-serif;
-  --font-body-lg: "Inter", sans-serif;
-  --font-headline-md: "Hanken Grotesk", sans-serif;
-  --font-label-caps: "JetBrains Mono", monospace;
-  --font-body-md: "Inter", sans-serif;
+  --font-display-lg-mobile: var(--font-hanken), sans-serif;
+  --font-display-lg: var(--font-hanken), sans-serif;
+  --font-body-lg: var(--font-inter), sans-serif;
+  --font-headline-md: var(--font-hanken), sans-serif;
+  --font-label-caps: var(--font-jetbrains-mono), monospace;
+  --font-body-md: var(--font-inter), sans-serif;
 
   --text-display-lg-mobile: 48px;
   --text-display-lg-mobile--line-height: 1.1;
@@ -103,88 +101,13 @@
 }
 
 @layer components {
-  .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 3.5rem;
-    padding: 0.875rem 1.75rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    font-family: var(--font-body-md);
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    line-height: 1.25;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 180ms ease, border-color 180ms ease,
-      box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
-  }
-
-  .cta-button-primary {
-    background-color: var(--color-cta-accent);
-    border-color: var(--color-cta-accent);
-    color: #181818;
-  }
-
-  .cta-button-secondary {
-    background-color: transparent;
-    border-color: #737373;
-    color: var(--color-text-primary);
-  }
-
-  .cta-button-compact {
-    min-height: 2.75rem;
-    padding: 0.625rem 1.25rem;
-    font-size: 0.75rem;
-  }
-
-  .cta-button:hover:not(:disabled) {
-    transform: translateY(-2px);
-  }
-
-  .cta-button-primary:hover:not(:disabled) {
-    background-color: var(--color-cta-accent-hover);
-    border-color: var(--color-cta-accent-hover);
-    box-shadow: 0 10px 24px rgba(255, 106, 81, 0.2);
-  }
-
-  .cta-button-secondary:hover:not(:disabled) {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-background);
-  }
-
-  .cta-button:focus-visible,
-  .cta-icon-button:focus-visible {
-    outline: 2px solid var(--color-cta-accent);
-    outline-offset: 3px;
-  }
-
-  .cta-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .cta-icon-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border: 1px solid var(--color-outline);
-    border-radius: 0.5rem;
-    background-color: var(--color-surface-container-low);
-    color: var(--color-text-primary);
-    cursor: pointer;
-    transition: background-color 180ms ease, border-color 180ms ease;
-  }
-
-  .cta-icon-button:hover {
-    background-color: var(--color-surface-container-high);
-    border-color: var(--color-primary);
+  .brand-mark {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: currentColor;
+    -webkit-mask: url("/logo.svg") center / contain no-repeat;
+    mask: url("/logo.svg") center / contain no-repeat;
   }
 }
 
@@ -230,10 +153,6 @@
     animation: none;
   }
 
-  .cta-button,
-  .cta-icon-button {
-    transition: none;
-  }
 }
 
 body {
@@ -241,5 +160,4 @@ body {
       linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
   background-size: 50px 50px;
-  background-attachment: fixed;
 }

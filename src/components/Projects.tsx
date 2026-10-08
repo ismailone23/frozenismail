@@ -9,7 +9,7 @@ const projects = [
     description:
       "A ROS 2 perception pipeline built for MIST Mongol Barota. A camera node streams frames to a YOLO tree-detection node through CvBridge and OpenCV for real-time annotated video.",
     tags: ["ROS 2", "OpenCV", "YOLO", "Python"],
-    image: "/tree-life-preview.png",
+    image: "/tree-life-preview.webp",
     link: "https://github.com/ismailone23/tree_life_detection",
   },
   {
@@ -98,9 +98,9 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="material-symbols-outlined">
-                    arrow_outward
-                  </span>
+                  <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
                 </a>
               </div>
               <p className="font-body-md text-on-surface-variant mb-6">

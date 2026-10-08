@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
           )}
 
-          <button disabled={isPending} className="cta-button cta-button-primary mt-4 w-full" type="submit">
+          <button disabled={isPending} className="w-full inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-container text-surface-container-low font-body-md font-bold hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all mt-4 disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
             {isPending ? 'Sending...' : 'Send Message'}
           </button>
         </form>
